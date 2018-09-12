@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-hP-Csh">
+                                <rect key="frame" x="152" y="221" width="70" height="25"/>
+                                <state key="normal" image="采纳"/>
+                                <connections>
+                                    <action selector="adoptClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tYE-8s-BVe"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="已采纳" translatesAutoresizingMaskIntoConstraints="NO" id="G0P-Ng-5nd">
+                                <rect key="frame" x="152" y="276" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="63p-2h-SY1"/>
+                                    <constraint firstAttribute="height" constant="70" id="UmF-Nl-VOc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G0P-Ng-5nd" firstAttribute="top" secondItem="RFS-hP-Csh" secondAttribute="bottom" constant="30" id="8kc-4f-CE4"/>
+                            <constraint firstItem="RFS-hP-Csh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="R63-su-Gca"/>
+                            <constraint firstItem="RFS-hP-Csh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPa-aV-pQ2"/>
+                            <constraint firstItem="G0P-Ng-5nd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Spu-1M-HMw"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="adoptButton" destination="RFS-hP-Csh" id="dCo-0H-bSq"/>
+                        <outlet property="adoptImage" destination="G0P-Ng-5nd" id="3wJ-4D-mYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="已采纳" width="70" height="70"/>
+        <image name="采纳" width="70" height="25"/>
+    </resources>
+</document>
